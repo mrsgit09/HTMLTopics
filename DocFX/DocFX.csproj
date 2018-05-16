@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BD79771-0E6B-4280-97E4-5A29E0CFFBD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocFX</RootNamespace>
+    <AssemblyName>DocFX</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="api\.gitignore" />
+    <None Include="api\index.md" />
+    <None Include="articles\index.md" />
+    <None Include="articles\toc.yml" />
+    <None Include="docfx.json" />
+    <None Include="index.md" />
+    <None Include="packages.config" />
+    <None Include="toc.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="articles\08220cc9-69b1-4072-a2e7-2a0ff201d505.htm" />
+    <Content Include="articles\141923d5-15ab-4ef1-a524-6dce75aae546.htm" />
+    <Content Include="articles\4c24c7d2-5c5a-4b99-88b2-f4b84cc293ae.htm" />
+    <Content Include="articles\67f3c7c7-1b20-4430-a652-81ca16519b94.htm" />
+    <Content Include="articles\ad1e6f1a-575d-47e7-be9c-9433247d496c.htm" />
+    <Content Include="articles\afd43dfb-d610-42c2-ba87-27368a764173.htm" />
+    <Content Include="articles\b1cb79f0-9b75-4ce9-abdd-b4d382cdb64c.htm" />
+    <Content Include="articles\b4985c26-8c1c-4ad0-b2b8-b7896c52a75d.htm" />
+    <Content Include="articles\dc7f8261-3151-459c-99b3-49d611d508ee.htm" />
+    <Content Include="articles\de4157d3-fc53-4aec-81be-d1659c8a2302.htm" />
+    <Content Include="articles\e4efaad0-1876-446e-9d34-bb921588f924.htm" />
+    <Content Include="articles\ebb4edde-b1ea-4a12-aefa-deea9865de8a.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\docfx.console.2.35.4\build\docfx.console.targets" Condition="Exists('..\packages\docfx.console.2.35.4\build\docfx.console.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\docfx.console.2.35.4\build\docfx.console.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\docfx.console.2.35.4\build\docfx.console.targets'))" />
+  </Target>
+</Project>
